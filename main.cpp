@@ -209,7 +209,7 @@ int main()
         factoryMap["sphere"] = new Factory_sphere;
         factoryMap["box"] = new Factory_box;
         factoryMap["tetra"] = new Factory_tetra;
-
+        factoryMap["triangle"] = new Factory_triangle;
         string file_name1 = "cam_data.txt";
         ifstream inp1;
         inp1.open(file_name1);

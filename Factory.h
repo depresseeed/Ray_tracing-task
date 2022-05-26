@@ -67,5 +67,27 @@ public:
 	}
 };
 
+class Factory_triangle : public Factory
+{
+public:
+	shape* create(const string& str, vec3 col) override
+	{
+		istringstream iss(str);
+		double num; vec3  v1, v2, v3;
+
+		iss >> v1.x;
+		iss >> v1.y;
+		iss >> v1.z;
+		iss >> v2.x;
+		iss >> v2.y;
+		iss >> v2.z;
+		iss >> v3.x;
+		iss >> v3.y;
+		iss >> v3.z;
+
+		return new triangle(v1, v2, v3, col);
+	}
+};
+
 
 #endif 
